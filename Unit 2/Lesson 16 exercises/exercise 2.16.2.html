@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html> 
+	<head> 
+	<style> body { margin: 0px; padding: 0px; } </style> 
+	</head> 
+	<body data-rsssl=1> 
+	<canvas id="myCanvas" width="1800" height="1000"></canvas> 
+	<script> 
+	var canvas = document.getElementById('myCanvas'); 
+	var context = canvas.getContext('2d'); 
+	var centerX = canvas.width / 2; 
+	var centerY = 0; var TOP_RADIUS = 25 
+	var MID_RADIUS = 50; var BOTTOM_RADIUS =75 
+	function start(){ 
+		for(var NUM_CIRCLES = 0;NUM_CIRCLES<100;NUM_CIRCLES++){ context.beginPath();
+		context.arc(centerX, centerY + (30 * NUM_CIRCLES), TOP_RADIUS, 0, 2 * Math.PI, false); 
+		context.fillStyle = 'gray'; context.fill(); 
+		context.lineWidth = 0; 
+		context.strokeStyle = '#003300'; context.stroke();
+		} } start(); 
+		</script>
+		</body> 
+	</html>

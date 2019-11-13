@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Is it even</title>
+	</head>
+	<script>
+var SENTINEL = 0;
+function even(n){
+	if (n % 2 == 0){
+         return "number is even";
+      }else{
+         return "number is false";
+}}
+function start(){
+	while (true){
+		var q = Number(prompt("Pick a number."));
+		document.write(even(q) + "<br>");
+		if (q == SENTINEL) {
+            break;
+        }
+	}
+}
+start();
+	</script>
+</html>

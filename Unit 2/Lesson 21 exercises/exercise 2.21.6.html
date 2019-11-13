@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <style>
+      body {
+        margin: 0px;
+        padding: 0px;
+      }
+    </style>
+  </head>
+  <body data-rsssl=1>
+    <canvas id="myCanvas" width="1800" height="1050"></canvas>
+    <script>
+ var canvas = document.getElementById('myCanvas');
+ var context = canvas.getContext('2d');
+ var centerX = canvas.width / 2;
+ var centerY = canvas.height / 2;
+ var radius = 30;
+function gs(){
+	context.beginPath();
+    context.rect(900, 360, 100, 300);
+    context.fillStyle = 'grey';
+    context.fill();
+    context.lineWidth = 7;
+    context.strokeStyle = 'grey';
+    context.stroke();
+}
+function rc(){
+    context.beginPath();
+    context.arc(centerX = 950, centerY = 600, radius, 0, 2 * Math.PI, false);
+    context.fillStyle = 'red';
+    context.fill();
+    context.lineWidth = 5;
+    context.strokeStyle = 'red';
+    context.stroke();
+}
+function yc(){
+    context.beginPath();
+    context.arc(centerX = 950, centerY = 500, radius, 0, 2 * Math.PI, false);
+    context.fillStyle = 'yellow';
+    context.fill();
+    context.lineWidth = 5;
+    context.strokeStyle = 'yellow';
+    context.stroke();
+}
+function gc(){
+    context.beginPath();
+    context.arc(centerX = 950, centerY = 400, radius, 0, 2 * Math.PI, false);
+    context.fillStyle = 'green';
+    context.fill();
+    context.lineWidth = 5;
+    context.strokeStyle = 'green';
+    context.stroke();
+}
+function start(){
+	gs();
+	rc();
+	yc();
+	gc();
+}
+start();
+	</script>
+</html>

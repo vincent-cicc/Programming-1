@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Password</title>
+	</head>
+	<script>
+var SENTINEL = "vincent";
+	
+function start(){
+	while(true){
+		var pass=prompt("What is the password: ");
+		prompt("Wrong password");
+		if(pass==SENTINEL){
+			break;
+		}
+	}
+	document.write("Welcome back.");
+}
+start();
+	</script>
+</html>

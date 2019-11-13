@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Snake eyes</title>
+	</head>
+	<script>
+function start(){
+	while(true){
+		d1 = Math.floor((Math.random() * 6) + 1)
+		d2 = Math.floor((Math.random() * 6) + 1)
+		document.write("You rolled a " + d1 + " on the first die" + "<br>");
+		document.write("You rolled a " + d2 + " on the first die" + "<br>");
+		if(d1==1 && d2==1){
+			break;
+		}
+	}
+}
+start();
+	</script>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Can you Graduate</title>
+	</head>
+	<script>
+function start(){
+	var credits = prompt("Do you have enough credits? answer with true or false ");
+	credits = (credits =="true");
+	var requirements = prompt("Did you meet all the requirements? answer with true or false ");
+	requirements = (requirements == "true");
+	var canGraduate = credits && requirements;
+	document.write("Can graduate: " + canGraduate);
+	}
+	start();
+	</script>
+</html>
+	

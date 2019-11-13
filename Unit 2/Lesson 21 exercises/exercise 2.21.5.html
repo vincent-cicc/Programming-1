@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Horizontal Lines</title>
+	</head>
+<canvas id="myCanvas" width="2000" height="700"></canvas>
+	<script>
+function line(y){
+	var c = document.getElementById("myCanvas");
+	var ctx = c.getContext("2d");
+	ctx.beginPath();
+	ctx.moveTo(0, y);
+	ctx.lineTo(2000, y);
+	ctx.stroke();
+}
+function start(){
+	line(400);
+}
+start();
+	</script>
+</html>

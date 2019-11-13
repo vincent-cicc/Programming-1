@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>All Star</title>
+	<head>
+	<script>
+function start(){
+	var x = Number(prompt("How many points did you score?"));
+	var y = Number(prompt("How many rebounds did you get?"));
+	var z = Number(prompt("How many assists did you get?"));
+	var allStar = x >= 10 && y >= 10 && z >= 10;
+	if (x == 25){
+		var allStar = "true";
+	}
+	document.write("You are an All Star: " + allStar);
+}
+start();
+	</script>
+</html>

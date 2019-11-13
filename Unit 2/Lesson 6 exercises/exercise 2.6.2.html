@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <style>
+      body {
+        margin: 0px;
+        padding: 0px;
+      }
+    </style>
+  </head>
+  <body data-rsssl=1>
+    <canvas id="myCanvas" width="578" height="400"></canvas>
+    <script>
+      var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext('2d');
+      var centerX = canvas.width / 2;
+      var centerY = canvas.height / 2;
+      var radius = 70;
+	  var radius2 = 35;
+	  var radius3 = 15;
+
+      context.beginPath();
+      context.arc(centerX, centerY = 200, radius, 0, 2 * Math.PI, false);
+      context.fillStyle = 'grey';
+      context.fill();
+      context.lineWidth = 5;
+      context.strokeStyle = '#003300';
+      context.stroke();
+	  context.beginPath();
+      context.arc(centerX, centerY = 100, radius2, 0, 2 * Math.PI, false);
+      context.fillStyle = 'grey';
+      context.fill();
+      context.lineWidth = 5;
+      context.strokeStyle = '#003300';
+      context.stroke();
+	  context.beginPath();
+      context.arc(centerX, centerY = 50, radius3, 0, 2 * Math.PI, false);
+      context.fillStyle = 'grey';
+      context.fill();
+      context.lineWidth = 5;
+      context.strokeStyle = '#003300';
+      context.stroke();
+    </script>
+  </body>
+</html> 

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Is there School today</title>
+	<head>
+	<script>
+function start(){
+	var weekday = prompt("Is it a weekday? answer with true or false ");
+	weekday = (weekday == "true");
+	var holiday = prompt("Is it a holiday today? answer with true or false");
+	holiday = (holiday == "true");
+	var noSchool = weekday && holiday;
+	document.write("There is no school today: " + noSchool);
+}
+start();
+	</script>
+</html>

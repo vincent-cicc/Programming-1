@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Ghosts</title>
+	</head>
+	<body data-rsssl=1> 
+	<canvas id="myCanvas" width="2000" height="2000" style="background-color:white"></canvas> 
+	<script> 
+var canvas = document.getElementById('myCanvas'); 
+var context = canvas.getContext('2d'); 
+var centerX = canvas.width / 2; 
+var centerY = 0; var TOP_RADIUS = 25 
+var MID_RADIUS = 50; var BOTTOM_RADIUS =75 
+var radius = 70;
+
+function circle(x,y,color,r){
+	context.beginPath();
+    context.arc(centerX = x, centerY = y, radius = r, 0, 2 * Math.PI, false);
+    context.fillStyle = color;
+    context.fill();
+    context.lineWidth = 5;
+    context.strokeStyle = color;
+    context.stroke();
+}
+
+function rectangle(x,y,l,w,color){
+	context.beginPath();
+    context.rect(x, y, l, w);
+    context.fillStyle = color;
+    context.fill();
+    context.lineWidth = 7;
+    context.strokeStyle = color;
+    context.stroke();
+}
+
+function line(sx,sy,x,y){
+	var c = document.getElementById("myCanvas");
+	var ctx = c.getContext("2d");
+	ctx.beginPath();
+	ctx.moveTo(sx, sy);
+	ctx.lineTo(x, y);
+	ctx.stroke();
+}
+
+function start(){
+	document.write(prompt("This is a tree in the sun."));
+	line(0,500,2000,500);
+	rectangle(700,300,100,200,'brown');
+	circle(750,300,'green',60);
+	circle(800,350,'green',40);
+	circle(700,350,'green',40);
+	circle(0,0,'yellow',100);
+	circle(750,350,'green',40);
+}
+start();
+	</script>
+</html>

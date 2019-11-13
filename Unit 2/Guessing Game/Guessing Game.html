@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Guessing Game</title>
+	</head>
+	<script>
+var rn = Math.floor((Math.random() * 100) + 1);
+function start(){
+	while(true){
+		var g = Number(prompt("Guess a number between 1 and 100."));
+		if(g>rn){
+			document.write(prompt("Your guess is to high."));
+		}else{}
+		if(g<rn){
+			document.write(prompt("Your guess is to low."));
+		}else{}
+		if(g==rn){
+			document.write("You guess my number, " + g + " good job.");
+			break;
+		}
+	}
+}
+start();
+	</script>
+</html>
