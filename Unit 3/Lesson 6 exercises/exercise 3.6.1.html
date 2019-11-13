@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Circle Wall</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script type="text/javascript" src="https://static.codehs.com/gulp/7666c7e4765f71aa338f37e94853d4cc7ed720a0/chs-js-lib/chs.js"></script>
+
+
+<style>
+canvas {
+    border: 1px solid black;
+    display: inline-block;
+    vertical-align: top;
+}
+pre {
+    border: 1px solid black;
+    display: inline-block;
+    width: 400px;
+    height: 500px;
+    background-color: #F5F5F5;
+}
+</style>
+
+</head>
+
+<body>
+<h1>Circle Wall</h1>
+
+
+
+<canvas
+width="400"
+height="500"
+class="codehs-editor-canvas"></canvas>
+
+<script>
+window.onload = function() {
+var RADIUS = 20;
+var DELAY = 40;
+var x = (-20);
+var y = (20);
+function start(){
+	setTimer(draw, DELAY);
+}
+function draw(){
+	ball = new Circle(20);
+	add(ball);
+	x = (x + 40);
+	ball.setPosition(x, y);
+	ball.setColor('red');
+	ball2 = new Circle(20);
+	add(ball2);
+	x = (x + 40);
+	ball2.setPosition(x, y);
+	ball2.setColor('black');
+	if(x>=420){
+		y = (y + 40);
+		x = -20;
+	}
+}
+    if (typeof start === 'function') {
+        start();
+    }
+};
+</script>
+
+</body>
+</html>

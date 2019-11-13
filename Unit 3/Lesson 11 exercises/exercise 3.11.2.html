@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Target</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script type="text/javascript" src="https://static.codehs.com/gulp/7666c7e4765f71aa338f37e94853d4cc7ed720a0/chs-js-lib/chs.js"></script>
+
+
+<style>
+canvas {
+    border: 1px solid black;
+    display: inline-block;
+    vertical-align: top;
+}
+pre {
+    border: 1px solid black;
+    display: inline-block;
+    width: 400px;
+    height: 500px;
+    background-color: #F5F5F5;
+}
+</style>
+
+</head>
+
+<body>
+<h1>Target</h1>
+
+
+
+<canvas
+width="400"
+height="500"
+class="codehs-editor-canvas"></canvas>
+
+<script>
+window.onload = function() {
+var ball;
+var ball2;
+var ball3;
+var dx = 4;
+var dy = 4;
+function start(){
+ball3 = new Circle(30);
+add(ball3);
+ball3.setColor('black');
+ball2 = new Circle(20);
+add(ball2);
+ball2.setColor('blue');
+ball = new Circle(10);
+add(ball);
+ball.setColor('red');
+mouseMoveMethod(update);
+}
+function update(e){
+x=(e.getX());
+y=(e.getY());
+ball.setPosition(e.getX(), e.getY());
+ball2.setPosition(e.getX(), e.getY());
+ball3.setPosition(e.getX(), e.getY());
+}
+    if (typeof start === 'function') {
+        start();
+    }
+};
+</script>
+</body>
+</html>

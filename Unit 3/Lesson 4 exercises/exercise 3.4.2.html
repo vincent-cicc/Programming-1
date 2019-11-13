@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Paint splatter</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script type="text/javascript" src="https://static.codehs.com/gulp/7666c7e4765f71aa338f37e94853d4cc7ed720a0/chs-js-lib/chs.js"></script>
+
+
+<style>
+canvas {
+    border: 1px solid black;
+    display: inline-block;
+    vertical-align: top;
+}
+</style>
+
+</head>
+
+<body>
+<h1>Paint splatter</h1>
+
+
+
+<canvas
+width="400"
+height="500"
+class="codehs-editor-canvas"></canvas>
+
+<script>
+window.onload = function() {
+ var CIRCLES_PER_SPLATTER = 20;
+ var MIN_RADIUS = 5;
+ var MAX_RADIUS = 25;
+ var DELAY = 500;
+function start(){
+	ball = new Circle(20);
+	add(ball);
+	setTimer(draw, DELAY);
+}
+function draw(){
+	CIRCLES_PER_SPLATTER;
+	var x = Randomizer.nextInt(50, 300);
+    var y = Randomizer.nextInt(58, 300);
+	ball.setPosition(x, y);
+	ball.setColor(Randomizer.nextColor());
+}
+    if (typeof start === 'function') {
+        start();
+    }
+};
+</script>
+
+</body>
+</html>
