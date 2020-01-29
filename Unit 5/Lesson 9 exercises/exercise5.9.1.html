@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Hogwarts</title>
+	</head>
+	<script type="text/javascript" src="https://static.codehs.com/gulp/7666c7e4765f71aa338f37e94853d4cc7ed720a0/chs-js-lib/chs.js"></script>
+	<script>
+function start(){
+    var studentHouse = buildStudentHouseObject();
+    printStudentsInHouse(studentHouse, "Gryffindor");
+}
+
+// Iterates through the Object studentHouse and prints
+// out the name of every student in the given house
+function printStudentsInHouse(studentHouse, house){
+    for(var name in studentHouse){
+		var number = studentHouse[name];
+		document.write(name + " -> " + number + "<br>");
+	}
+}
+
+function buildStudentHouseObject(){
+    var studentHouse = {
+        "Harry Potter": "Gryffindor",
+        "Ginny Weasley": "Gryffindor",
+        "Draco Malfoy": "Slytherin",
+        "Ron Weasley": "Gryffindor",
+        "Hermione Granger": "Gryffindor",
+        "Cho Chang": "Ravenclaw",
+        "Gilderoy Lockhart": "Ravenclaw",
+        "Thomas Riddle": "Slytherin",
+        "Peter Pettigrew": "Gryffindor",
+        "Cedric Diggory": "Hufflepuff",
+        "Ernie Macmillan": "Hufflepuff",
+        "Hannah Longbottom": "Hufflepuff"
+    };
+    return studentHouse;
+}
+start();
+	</script>
+</html>

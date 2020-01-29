@@ -1,0 +1,65 @@
+<html>
+	<head>
+		<title>Grid Basics</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script type="text/javascript" src="https://static.codehs.com/gulp/e6aea51ba88beb25743c2b87dddabb722becd2f8/chs-js-lib/chs.js"></script>
+
+
+	<style>
+canvas {
+    border: 1px solid black;
+    display: inline-block;
+    vertical-align: top;
+}
+pre {
+    border: 1px solid black;
+    display: inline-block;
+    width: 400px;
+    height: 500px;
+    background-color: #F5F5F5;
+}
+	</style>
+
+	</head>
+
+	<body>
+	<h1>Grid Basics</h1>
+
+
+
+<canvas
+width="400"
+height="500"
+class="codehs-editor-canvas"></canvas>
+<pre id="console"></pre>
+
+	<script>
+window.onload = function() {
+    function start(){
+	var grid = new Grid(2, 3);
+	grid.set(0, 0, 0);
+	grid.set(0, 1, 1);
+	grid.set(0, 2, 2);
+	grid.set(1, 0, 1);
+	grid.set(1, 1, 2);
+	grid.set(1, 2, 3);
+	
+	for(var row = 0; row < grid.numRows(); row++){
+		// Print each row
+		for(var col = 0; col < grid.numCols(); col++){
+			var elem = grid.get(row, col);
+			println(elem + " ");
+		}
+		println("");
+	}
+}
+    if (typeof start === 'function') {
+        start();
+    }
+};
+	</script>
+
+	</body>
+</html>

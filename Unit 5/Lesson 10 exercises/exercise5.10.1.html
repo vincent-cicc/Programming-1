@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Text Messages</title>
+	</head>
+	<script type="text/javascript" src="https://static.codehs.com/gulp/7666c7e4765f71aa338f37e94853d4cc7ed720a0/chs-js-lib/chs.js"></script>
+	<script>
+ function start(){
+    // Decide what kind of data structure to use for textMessages
+    // Replace '...' with your data structure
+    var textMessages = {};
+    
+    // Test out your functions
+    sendMessage(textMessages, "Jenny", "Hi Jenny!");
+    sendMessage(textMessages, "Jenny", "brb");
+    sendMessage(textMessages, "Teddy", "I love you");
+    sendMessage(textMessages, "Jenny", "Are you there?");
+    
+    var jennyMessages = getMessages(textMessages, "Jenny");
+    var teddyMessages = getMessages(textMessages, "Teddy");
+    var johnMessages = getMessages(textMessages, "John");
+    
+    document.write("To Jenny: " + jennyMessages);
+    document.write("To Teddy: " + teddyMessages);
+    document.write("To John: " + johnMessages);
+}
+
+// Update textMessages to store message sent to friendName
+function sendMessage(textMessages, friendName, message){
+    var sendMessage = textMessages[friendName + message];
+    
+}
+
+// Get all the text messages sent to friendName
+function getMessages(textMessages, friendName){
+    var getMessages = textMessages[friendName];
+}
+start();
+	</script>
+</html>

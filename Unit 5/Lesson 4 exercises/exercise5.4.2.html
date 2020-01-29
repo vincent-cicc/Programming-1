@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>number of heads and tails</title>
+	</head>
+
+	<script>
+var NUM_FLIPS = 100;
+var x = 0;
+var y = 0;
+var hs = 0;
+
+function flipCoins(){
+	var flips = [];
+	for(var i = 0; i < NUM_FLIPS; i++){
+		if(Math.floor((Math.random() * 2) + 1) == 2){
+			flips.push("Heads");
+			x = x + 1;
+		}else{
+			flips.push("Tails");
+			y = y + 1;
+		}
+	}
+	return flips;
+}
+
+function printArray(arr){
+	for(var i = 0; i < arr.length; i++){
+		document.write(i + ": " + arr[i]);
+	}
+}
+
+function countHeadsAndTails(flips) {
+    document.write("You fliped " + x + " numbers of Heads.");
+	document.write("You fliped " + y + " numbers of Tails.");
+}
+
+function streakCounter(flips){
+	
+}
+
+function start(){
+	var temp = flipCoins();
+	document.write(temp);
+	countHeadsAndTails(temp);
+}
+start();
+	</script>
+</html>
